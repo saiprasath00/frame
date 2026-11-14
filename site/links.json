@@ -1,604 +1,524 @@
 {
   "entries": [
     [
-      "VegaMovies",
-      "https://1vegamovies.baby",
-      "movies"
-    ],
-    [
-      "MKV BASE",
-      "https://mkvbase.site",
-      "movies"
-    ],
-    [
-      "DDLBase",
-      "https://ddlbase.com",
-      "movies"
-    ],
-    [
-      "XDMovies",
-      "https://xdmovies.com",
-      "movies"
-    ],
-    [
-      "MovieParadise",
-      "https://movieparadise.org",
-      "movies"
-    ],
-    [
       "4KHDHub",
-      "https://4khdhub.one",
-      "movies"
-    ],
-    [
-      "Cinetaro",
-      "https://cinetaro.to",
-      "movies"
-    ],
-    [
-      "HDHub4u",
-      "https://hdhub4u.fr",
-      "movies"
-    ],
-    [
-      "ShowBox",
-      "https://www.showbox.media",
-      "movies"
-    ],
-    [
-      "PlayTorrio",
-      "https://playtorrio.xyz",
-      "movies"
-    ],
-    [
-      "Medeberiya",
-      "https://medeberiya.net",
-      "movies"
-    ],
-    [
-      "KMMOVIES",
-      "https://kmmovies.shop",
-      "movies"
-    ],
-    [
-      "KatMovieHD",
-      "https://new.katmoviehd.top",
-      "movies"
-    ],
-    [
-      "HindMoviez",
-      "https://hindmoviez.cafe",
+      "https://4khdhub.one/",
       "movies"
     ],
     [
       "AV1Core",
-      "https://av1core.pages.dev",
-      "movies"
-    ],
-    [
-      "HdMoviesHub",
-      "https://hdmovieshub.fyi",
-      "movies"
-    ],
-    [
-      "MultiShows",
-      "https://multishows.top",
-      "movies"
-    ],
-    [
-      "OlaMovies",
-      "https://olamovies.dad",
-      "movies"
-    ],
-    [
-      "PSArips",
-      "https://psarips.is",
-      "movies"
-    ],
-    [
-      "StagaTV",
-      "https://www.stagatv.com",
-      "movies"
-    ],
-    [
-      "Willow",
-      "https://willowmovies.com",
-      "movies"
-    ],
-    [
-      "Movies Ni Pipay",
-      "https://moviesnipipay.me",
-      "movies"
-    ],
-    [
-      "1Shows",
-      "https://1shows.org",
-      "movies"
-    ],
-    [
-      "RLSXTVT",
-      "https://rlsxtvt.icu",
-      "movies"
-    ],
-    [
-      "Levidia",
-      "https://www.levidia.ch",
-      "movies"
-    ],
-    [
-      "Downloads AnyMovies",
-      "https://www.downloads-anymovies.co",
-      "movies"
-    ],
-    [
-      "HollyMovieHD",
-      "https://hollymoviehd.cc",
-      "movies"
-    ],
-    [
-      "UHDMovies",
-      "https://modlist.in",
-      "movies"
-    ],
-    [
-      "TFPDL",
-      "https://tfpdl.se",
-      "movies"
-    ],
-    [
-      "Free Movies",
-      "https://free-movies.to",
-      "movies"
-    ],
-    [
-      "SeriesVault",
-      "https://seriesvault.win",
-      "movies"
-    ],
-    [
-      "FilmFans",
-      "https://filmfans.org",
-      "movies"
-    ],
-    [
-      "WorldFree4u",
-      "https://worldfree4u.expert",
-      "movies"
-    ],
-    [
-      "SSR Movies",
-      "https://ssrmovies.blue",
+      "https://av1core.pages.dev/",
       "movies"
     ],
     [
       "Best-MovieZ",
-      "https://www.best-moviez.ws",
+      "https://www.best-moviez.ws/",
       "movies"
     ],
     [
-      "ShareBB",
-      "https://sharebb.me",
+      "Cinetaro",
+      "https://cinetaro.to/",
       "movies"
     ],
     [
-      "SolidarityCinema",
-      "https://www.solidaritycinema.com",
+      "DDLBase",
+      "https://ddlbase.com/",
+      "movies"
+    ],
+    [
+      "downloads-anymovies",
+      "https://www.downloads-anymovies.co/",
+      "movies"
+    ],
+    [
+      "FilmFans",
+      "https://filmfans.org/",
       "movies"
     ],
     [
       "FilmGo",
-      "https://www.filmgo.live",
+      "https://www.filmgo.live/",
       "movies"
     ],
     [
-      "TodayTVSeries",
-      "https://www.todaytvseries1.com",
-      "movies"
-    ],
-    [
-      "SubSL",
-      "https://subsl.top",
-      "movies"
-    ],
-    [
-      "TV Shows",
-      "https://tvshows.ac",
-      "movies"
-    ],
-    [
-      "Pahe",
-      "https://pahe.ink",
-      "movies"
-    ],
-    [
-      "TvShows4Mobile",
-      "https://tvshows4mobile.org",
-      "movies"
-    ],
-    [
-      "Naijavault",
-      "https://www.naijavault.com",
-      "movies"
-    ],
-    [
-      "Waploaded",
-      "https://films.waploaded.com",
+      "Free Movies",
+      "https://free-movies.to/",
       "movies"
     ],
     [
       "HDEncode",
-      "https://hdencode.org",
+      "https://hdencode.org/",
       "movies"
     ],
     [
-      "Cinema of the World",
-      "https://worldscinema.org",
+      "HDHub4u",
+      "https://hdhub4u.fr/",
+      "movies"
+    ],
+    [
+      "HdMoviesHub",
+      "https://hdmovieshub.fyi/",
+      "movies"
+    ],
+    [
+      "HindMoviez",
+      "https://hindmoviez.cafe/",
+      "movies"
+    ],
+    [
+      "HollyMovieHD",
+      "https://hollymoviehd.cc/",
+      "movies"
+    ],
+    [
+      "KatMovieHD",
+      "https://new.katmoviehd.top/",
+      "movies"
+    ],
+    [
+      "KMMOVIES",
+      "https://kmmovies.shop/category/english/",
+      "movies"
+    ],
+    [
+      "Levidia",
+      "https://www.levidia.ch/",
+      "movies"
+    ],
+    [
+      "Medeberiya",
+      "https://medeberiya.net/",
+      "movies"
+    ],
+    [
+      "MKV BASE",
+      "https://mkvbase.site/",
+      "movies"
+    ],
+    [
+      "mov-cli",
+      "https://mov-cli.github.io/",
+      "movies"
+    ],
+    [
+      "MovieParadise",
+      "https://movieparadise.org/",
+      "movies"
+    ],
+    [
+      "Movies Ni Pipay",
+      "https://moviesnipipay.me/",
+      "movies"
+    ],
+    [
+      "MultiShows",
+      "https://multishows.top/",
+      "movies"
+    ],
+    [
+      "Naijavault",
+      "https://www.naijavault.com/",
+      "movies"
+    ],
+    [
+      "OlaMovies",
+      "https://olamovies.dad/",
+      "movies"
+    ],
+    [
+      "Pahe",
+      "https://pahe.ink/",
+      "movies"
+    ],
+    [
+      "PlayTorrio",
+      "https://playtorrio.xyz/",
+      "movies"
+    ],
+    [
+      "PSArips",
+      "https://psarips.is/",
       "movies"
     ],
     [
       "RapidMoviez",
-      "https://rmz.cr",
+      "https://rmz.cr/",
       "movies"
     ],
     [
-      "animepahe",
-      "https://animepahe.pw",
-      "anime"
+      "RLSXTVT",
+      "https://rlsxtvt.icu/",
+      "movies"
     ],
     [
-      "Anikoto",
-      "https://anikototv.to",
-      "anime"
+      "SeriesVault",
+      "https://seriesvault.win/",
+      "movies"
     ],
     [
-      "Anisuge",
-      "https://animesuge.cz",
-      "anime"
+      "ShareBB",
+      "https://sharebb.me/",
+      "movies"
     ],
     [
-      "Miruro",
-      "https://miruro.cx",
-      "anime"
+      "ShowBox",
+      "https://www.showbox.media/",
+      "movies"
     ],
     [
-      "AniVault",
-      "https://anivault.tv",
-      "anime"
+      "SolidarityCinema",
+      "https://www.solidaritycinema.com/",
+      "movies"
     ],
     [
-      "Re:ANIME",
-      "https://reanime.cz",
-      "anime"
+      "SSR Movies",
+      "https://ssrmovies.blue/",
+      "movies"
     ],
     [
-      "AniDream",
-      "https://anidream.to",
-      "anime"
+      "StagaTV",
+      "https://www.stagatv.com/",
+      "movies"
     ],
     [
-      "Gotaku",
-      "https://gotaku.to",
-      "anime"
+      "SubSL",
+      "https://subsl.top/",
+      "movies"
     ],
     [
-      "MKissa",
-      "https://mkissa.to",
-      "anime"
+      "TFPDL",
+      "https://tfpdl.se/category/movies/",
+      "movies"
     ],
     [
-      "All Manga",
-      "https://allmanga.to",
-      "anime"
+      "TodayTVSeries",
+      "https://www.todaytvseries1.com/",
+      "movies"
     ],
     [
-      "Ani.pm",
-      "https://ani.pm",
-      "anime"
+      "TV Shows",
+      "https://tvshows.ac/",
+      "movies"
     ],
     [
-      "AnimeX",
-      "https://animex.one",
-      "anime"
+      "TVSBoy",
+      "https://tvsboy.com/",
+      "movies"
     ],
     [
-      "NekoWatch",
-      "https://nekowatch.xyz",
-      "anime"
+      "TvShows4Mobile",
+      "https://tvshows4mobile.org/",
+      "movies"
     ],
     [
-      "AniLight",
-      "https://anilight.live",
-      "anime"
+      "UHDMovies",
+      "https://modlist.in/?type=uhdmovies",
+      "movies"
     ],
     [
-      "Anidap",
-      "https://anidap.lol",
-      "anime"
+      "VegaMovies",
+      "https://1vegamovies.baby/",
+      "movies"
     ],
     [
-      "AniXo",
-      "https://anixo.online",
-      "anime"
+      "Waploaded",
+      "https://films.waploaded.com/movie",
+      "movies"
     ],
     [
-      "Anistream",
-      "https://anistream.one",
-      "anime"
+      "Willow",
+      "https://willowmovies.com/",
+      "movies"
     ],
     [
-      "JustAnime",
-      "https://justanime.to",
-      "anime"
+      "WorldFree4u",
+      "https://worldfree4u.expert/",
+      "movies"
     ],
     [
-      "WeebTube",
-      "https://weebtube.cc",
-      "anime"
+      "XDMovies",
+      "https://xdmovies.com/",
+      "movies"
     ],
     [
-      "KickAssAnime",
-      "https://kaa.lt",
-      "anime"
-    ],
-    [
-      "Anime Nexus",
-      "https://anime.nexus",
-      "anime"
-    ],
-    [
-      "Aniwave",
-      "https://aniwaves.ru",
-      "anime"
-    ],
-    [
-      "AniZone",
-      "https://anizone.to",
-      "anime"
-    ],
-    [
-      "Kazora",
-      "https://kazora.cc",
-      "anime"
-    ],
-    [
-      "Anify",
-      "https://anify.to",
-      "anime"
-    ],
-    [
-      "Tsukuyomi",
-      "https://tsukuyomi.tv",
-      "anime"
-    ],
-    [
-      "AnimeDex",
-      "https://animedex.fun",
-      "anime"
-    ],
-    [
-      "9anime",
-      "https://9animstv.to",
-      "anime"
-    ],
-    [
-      "KoToTV",
-      "https://kototv.to",
-      "anime"
-    ],
-    [
-      "Zenbu",
-      "https://zen-bu.cc",
-      "anime"
-    ],
-    [
-      "Tokyo Insider",
-      "https://www.tokyoinsider.com",
-      "anidownload"
-    ],
-    [
-      "Kayoanime",
-      "https://kayoanime.com",
-      "anidownload"
-    ],
-    [
-      "hi10anime",
-      "https://hi10anime.com",
-      "anidownload"
-    ],
-    [
-      "Anime-Sharing",
-      "https://www.anime-sharing.com",
-      "anidownload"
-    ],
-    [
-      "Anime Tosho",
-      "https://animetosho.net",
-      "anidownload"
-    ],
-    [
-      "Anime2Enjoy",
-      "https://www.anime2enjoy.com",
-      "anidownload"
-    ],
-    [
-      "Chiby",
-      "https://www.animechiby.com",
-      "anidownload"
-    ],
-    [
-      "Animevilla",
-      "https://animevilla.org",
-      "anidownload"
-    ],
-    [
-      "AnimeSalt",
-      "https://animesalt.cx",
-      "anidownload"
-    ],
-    [
-      "PikaHD",
-      "https://pikahd.co",
-      "anidownload"
-    ],
-    [
-      "AniDL",
-      "https://anidl.org",
-      "anidownload"
-    ],
-    [
-      "anime7.download",
-      "https://anime7.download",
-      "anidownload"
-    ],
-    [
-      "AnimeOut",
-      "https://www.animeout.xyz",
-      "anidownload"
-    ],
-    [
-      "nibl",
-      "https://nibl.co.uk",
-      "anidownload"
-    ],
-    [
-      "Movy",
-      "https://www.movy.sx",
-      "fourk"
-    ],
-    [
-      "Cinejoy",
-      "https://cinejoy.pk",
-      "fourk"
-    ],
-    [
-      "PopcornMovies",
-      "https://popcornmovies.st",
-      "fourk"
-    ],
-    [
-      "BingeBox",
-      "https://bingebox.ac",
+      "67Movies",
+      "https://67movies.st/",
       "fourk"
     ],
     [
       "7Movies",
-      "https://7movies.ac",
-      "fourk"
-    ],
-    [
-      "Atlantic",
-      "https://atlantic.bz",
-      "fourk"
-    ],
-    [
-      "fprime",
-      "https://fprime.at",
-      "fourk"
-    ],
-    [
-      "ShuttleTV",
-      "https://shuttletv.pk",
-      "fourk"
-    ],
-    [
-      "FlyStream",
-      "https://flystream.net",
-      "fourk"
-    ],
-    [
-      "Vivarium",
-      "https://vivarium.su",
-      "fourk"
-    ],
-    [
-      "SweetFox",
-      "https://sweetfox.app",
-      "fourk"
-    ],
-    [
-      "CineLite",
-      "https://cinelite.xyz",
-      "fourk"
-    ],
-    [
-      "dulo",
-      "https://dulo.mov",
-      "fourk"
-    ],
-    [
-      "ArrowTV",
-      "https://arrowtv.net",
-      "fourk"
-    ],
-    [
-      "Chillflix",
-      "https://chillflix.lol",
-      "fourk"
-    ],
-    [
-      "Reelix",
-      "https://reelix.ac",
-      "fourk"
-    ],
-    [
-      "BingeBang",
-      "https://bingebang.st",
-      "fourk"
-    ],
-    [
-      "Lightflix",
-      "https://lightflix.app",
-      "fourk"
-    ],
-    [
-      "Koddo",
-      "https://koddo.to",
-      "fourk"
-    ],
-    [
-      "Zenox",
-      "https://zenox.lol",
-      "fourk"
-    ],
-    [
-      "Nexa",
-      "https://nexa.mov",
-      "fourk"
-    ],
-    [
-      "Stellar",
-      "https://stellar.rip",
-      "fourk"
-    ],
-    [
-      "HiveX",
-      "https://hivex.stream",
-      "fourk"
-    ],
-    [
-      "Sleepy",
-      "https://sleepy.lat",
-      "fourk"
-    ],
-    [
-      "Mapple",
-      "https://mapple.fun",
-      "fourk"
-    ],
-    [
-      "Cinecat",
-      "https://cinecat.eu",
+      "https://7movies.ac/",
       "fourk"
     ],
     [
       "Aether",
-      "https://aether.st",
+      "https://aether.st/",
+      "fourk"
+    ],
+    [
+      "Afterdusk",
+      "https://afterdusk.app/",
+      "fourk"
+    ],
+    [
+      "ArrowTV",
+      "https://arrowtv.net/",
+      "fourk"
+    ],
+    [
+      "Atlantic",
+      "https://atlantic.bz/",
+      "fourk"
+    ],
+    [
+      "BingeBang",
+      "https://bingebang.st/",
+      "fourk"
+    ],
+    [
+      "BingeBox",
+      "https://bingebox.ac/",
+      "fourk"
+    ],
+    [
+      "Chillflix",
+      "https://chillflix.lol/",
+      "fourk"
+    ],
+    [
+      "Cinecat",
+      "https://cinecat.eu/",
+      "fourk"
+    ],
+    [
+      "Cinejoy",
+      "https://cinejoy.pk/",
+      "fourk"
+    ],
+    [
+      "CineLite",
+      "https://cinelite.xyz/",
+      "fourk"
+    ],
+    [
+      "Cinezo",
+      "https://www.cinezo.st/",
+      "fourk"
+    ],
+    [
+      "Cno",
+      "https://cno.to/",
+      "fourk"
+    ],
+    [
+      "Coreflix",
+      "https://coreflix.tv/",
+      "fourk"
+    ],
+    [
+      "dulo",
+      "https://dulo.mov/",
+      "fourk"
+    ],
+    [
+      "FlyStream",
+      "https://flystream.net/",
+      "fourk"
+    ],
+    [
+      "fprime",
+      "https://fprime.at/",
       "fourk"
     ],
     [
       "frameXTV",
-      "https://framextv.xyz",
+      "https://framextv.xyz/",
       "fourk"
+    ],
+    [
+      "HiveX",
+      "https://hivex.stream/",
+      "fourk"
+    ],
+    [
+      "Koddo",
+      "https://koddo.to/",
+      "fourk"
+    ],
+    [
+      "Lightflix",
+      "https://lightflix.app/",
+      "fourk"
+    ],
+    [
+      "Mapple",
+      "https://mapple.fun/",
+      "fourk"
+    ],
+    [
+      "moanatv.",
+      "https://lfmx.app/",
+      "fourk"
+    ],
+    [
+      "Movy",
+      "https://www.movy.sx/",
+      "fourk"
+    ],
+    [
+      "NEPU",
+      "https://nepu.io/",
+      "fourk"
+    ],
+    [
+      "Nexa",
+      "https://nexa.mov/",
+      "fourk"
+    ],
+    [
+      "PopcornMovies",
+      "https://popcornmovies.st/",
+      "fourk"
+    ],
+    [
+      "Reelix",
+      "https://reelix.ac/",
+      "fourk"
+    ],
+    [
+      "ShowBox",
+      "https://www.showbox.media/",
+      "fourk"
+    ],
+    [
+      "ShuttleTV",
+      "https://shuttletv.pk/",
+      "fourk"
+    ],
+    [
+      "Sleepy",
+      "https://sleepy.lat/",
+      "fourk"
+    ],
+    [
+      "Stellar",
+      "https://stellar.rip/",
+      "fourk"
+    ],
+    [
+      "SweetFox",
+      "https://sweetfox.app/",
+      "fourk"
+    ],
+    [
+      "Vivarium",
+      "https://vivarium.su/",
+      "fourk"
+    ],
+    [
+      "Vuflix",
+      "https://vuflix.co/",
+      "fourk"
+    ],
+    [
+      "Willow",
+      "https://willowmovies.com/",
+      "fourk"
+    ],
+    [
+      "Zenox",
+      "https://zenox.lol/",
+      "fourk"
+    ],
+    [
+      "AniDL",
+      "https://anidl.org/",
+      "anidownload"
+    ],
+    [
+      "Anime Tosho",
+      "https://animetosho.net/",
+      "anidownload"
+    ],
+    [
+      "Anime-Sharing",
+      "https://www.anime-sharing.com/",
+      "anidownload"
+    ],
+    [
+      "Anime2Enjoy",
+      "https://www.anime2enjoy.com/",
+      "anidownload"
+    ],
+    [
+      "anime7.download",
+      "https://anime7.download/",
+      "anidownload"
+    ],
+    [
+      "AnimeOut",
+      "https://www.animeout.xyz/",
+      "anidownload"
+    ],
+    [
+      "animepahe",
+      "https://animepahe.pw/",
+      "anidownload"
+    ],
+    [
+      "AnimeSalt",
+      "https://animesalt.cx/",
+      "anidownload"
+    ],
+    [
+      "Animevilla",
+      "https://animevilla.org/az-list/",
+      "anidownload"
+    ],
+    [
+      "Chiby",
+      "https://www.animechiby.com/",
+      "anidownload"
+    ],
+    [
+      "EverythingMoe",
+      "https://everythingmoe.com/section/download",
+      "anidownload"
+    ],
+    [
+      "hi10anime",
+      "https://hi10anime.com/",
+      "anidownload"
+    ],
+    [
+      "JustAnime",
+      "https://justanime.to/",
+      "anidownload"
+    ],
+    [
+      "Kayoanime",
+      "https://kayoanime.com/",
+      "anidownload"
+    ],
+    [
+      "nibl",
+      "https://nibl.co.uk/",
+      "anidownload"
+    ],
+    [
+      "PikaHD",
+      "https://pikahd.co/",
+      "anidownload"
+    ],
+    [
+      "The Index DDL",
+      "https://theindex.moe/collection/ddl",
+      "anidownload"
+    ],
+    [
+      "Tokyo Insider",
+      "https://www.tokyoinsider.com/",
+      "anidownload"
     ]
   ]
 }
