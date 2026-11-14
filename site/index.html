@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" data-type="software" data-radius="sharp" data-motion="calm">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101410">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <meta name="description" content="FRAME is a streamlined movie-first index of direct destination links. Search, save and browse film, 4K and anime sites.">
+  <title>FRAME — Movie websites first</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{--base:#101410;--surface:#161b15;--surface-hover:#1c241a;--ink:#f0f0e6;--muted:#8f998e;--faint:#6c766b;--line:#343d32;--lime:#d6f46b;--dark:#101410;--wrap:1330px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--base);color:var(--ink);font:400 15px/1.5 'DM Sans',Arial,sans-serif;min-width:320px;overflow-x:hidden}
+    button,input,a{font:inherit;-webkit-tap-highlight-color:transparent}
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    [hidden]{display:none!important}
+    ::selection{background:var(--lime);color:#111}
+    :focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+    .wrap{width:min(var(--wrap),100%);margin-inline:auto;padding-inline:clamp(20px,4.1vw,58px)}
+    .mono{font:500 11px/1.4 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+    .skip{position:absolute;top:-80px;left:20px;z-index:200;background:var(--lime);color:var(--dark);padding:12px 18px}
+    .skip:focus{top:15px}
+    /* navigation: no illustrated icon or hero treatment */
+    .mast{height:76px;border-bottom:1px solid var(--line);position:relative;z-index:20;background:var(--base)}
+    .mast-inner{height:100%;display:flex;justify-content:space-between;align-items:center;gap:22px}
+    .brand{display:inline-flex;gap:5px;align-items:baseline;white-space:nowrap;font-size:27px;font-weight:800;letter-spacing:-.095em;line-height:1}
+    .brand-dot{color:var(--lime);font-size:31px;letter-spacing:0}
+    .header-right{display:flex;align-items:center;gap:36px}
+    .header-menu{display:flex;align-items:center;gap:30px}
+    .header-menu a{color:#a8b0a6;font:500 11px/1 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.04em;position:relative;padding-block:12px}
+    .header-menu a::after{position:absolute;content:"";width:0;left:0;bottom:5px;height:1px;background:var(--lime);transition:width .2s ease}
+    .header-menu a:hover{color:var(--ink)}
+    .header-menu a:hover::after{width:100%}
+    .header-note{padding:10px 0;color:var(--lime);white-space:nowrap}
+    
+    .link-arrow{display:inline-block;transition:transform .18s ease;font-size:16px;line-height:1}
+    a:hover>.link-arrow{transform:translate(2px,-2px)}
+    /* the hero is deliberately typographic, like a cinema programme cover */
+    .hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+    .hero-inner{padding-block:65px 78px;display:grid;grid-template-columns:minmax(0,1fr) 226px;column-gap:7%;align-items:end}
+    .eyebrow{display:flex;gap:12px;align-items:center;color:var(--lime);margin:0 0 27px}
+    .eyebrow .line{width:26px;height:1px;background:var(--lime)}
+    h1{font-size:clamp(90px,10.7vw,152px);line-height:.79;letter-spacing:-.107em;font-weight:700;margin:0;max-width:890px}
+    h1 span{display:block;white-space:nowrap}
+    h1 .serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.065em;color:var(--lime);padding-bottom:.12em;padding-top:.04em}
+    .intro{font-size:15px;line-height:1.66;max-width:420px;color:#b7c0b4;margin:23px 0 0}
+    .hero-rail{border-left:1px solid var(--line);padding-left:29px;padding-bottom:12px;min-height:255px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+    .hero-count{font:500 clamp(73px,8.6vw,126px)/.87 'DM Sans',sans-serif;letter-spacing:-.12em;color:var(--ink);font-variant-numeric:tabular-nums;margin-left:-8px}
+    .hero-count-label{font:500 11px/1.5 'DM Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+    .hero-meta{display:grid;grid-template-columns:1fr auto;gap:12px 8px;align-items:center;padding-top:17px;border-top:1px solid var(--line);color:#b1bcb0}
+    .hero-meta strong{font:500 13px/1 'DM Mono',monospace;color:var(--ink)}
+    .ticker{height:37px;display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);font:500 10px/1 'DM Mono',monospace;letter-spacing:.13em;color:#8e9b8b;overflow:hidden;white-space:nowrap}
+    .ticker .asterisk{color:var(--lime);font-size:16px;line-height:0;margin-inline:15px}
+    .ticker-content{display:flex;align-items:center;gap:16px;width:max-content}
+    /* the directory is the product: rows, rules, purposeful controls */
+    .directory{padding-block:77px 85px}
+    .directory-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+    .directory-kicker{margin:0 0 9px;color:var(--lime)}
+    h2{font-size:clamp(40px,4vw,58px);line-height:1;letter-spacing:-.069em;margin:0;font-weight:600}
+    .directory-sub{color:var(--muted);margin:0 0 4px;max-width:380px;font-size:13px;text-align:right}
+    .workspace{display:grid;grid-template-columns:229px minmax(0,1fr);gap:49px;padding-top:33px}
+    .sidebar{align-self:start;position:sticky;top:24px}
+    .sidebar-label{color:var(--faint);margin:0 0 18px}
+    .filter-list{display:flex;flex-direction:column;gap:3px}
+    .filter-link{border:0;border-left:2px solid transparent;background:transparent;color:#a5afa1;display:grid;grid-template-columns:27px 1fr auto;gap:9px;align-items:center;width:100%;min-height:49px;padding:10px 10px 10px 13px;text-align:left;transition:background .18s,border-color .18s,color .18s}
+    .filter-link .filter-index{font:500 10px 'DM Mono',monospace;color:var(--faint)}
+    .filter-link .filter-name{font-size:14px;font-weight:500}
+    .filter-link .filter-count{font:500 11px 'DM Mono',monospace;color:var(--faint)}
+    .filter-link:hover{background:var(--surface-hover);color:var(--ink)}
+    .filter-link[aria-pressed="true"]{border-left-color:var(--lime);background:#20281d;color:var(--ink)}
+    .filter-link[aria-pressed="true"] .filter-index,.filter-link[aria-pressed="true"] .filter-count{color:var(--lime)}
+    .sidebar-note{border-top:1px solid var(--line);margin-top:34px;padding-top:20px;color:#839082;max-width:205px;font-size:12px;line-height:1.65}
+    .browser{min-width:0}
+    .searchbar{height:64px;display:flex;align-items:center;border-bottom:1px solid #7f8b7a;gap:15px;position:relative;transition:border-color .2s}
+    .searchbar:focus-within{border-bottom-color:var(--lime)}
+    .search-mark{color:var(--lime);flex-shrink:0}
+    .searchbar input{flex:1;min-width:0;height:100%;border:0;background:transparent;color:var(--ink);font-size:19px;font-weight:500;outline:none;letter-spacing:-.025em}
+    .searchbar input::placeholder{color:#7f897c}
+    .search-hint{border:1px solid #52604f;border-radius:2px;color:#8e9c8b;padding:4px 8px;flex-shrink:0}
+    .search-clear{border:0;background:transparent;color:var(--muted);font-size:24px;width:36px;height:42px;display:grid;place-items:center;flex-shrink:0}
+    .search-clear:hover{color:var(--ink)}
+    .browser-toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:23px 0 18px}
+    .result-number{color:var(--ink)}
+    .result-number span{color:var(--faint);font-weight:400}
+    .tools{display:flex;gap:5px;align-items:center}
+    .tool{border:1px solid transparent;background:transparent;color:#a9b6a4;min-height:43px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 11px;font:500 11px/1 'DM Mono',monospace;white-space:nowrap;transition:background .18s,color .18s,border-color .18s}
+    .tool:hover{color:var(--ink);background:var(--surface-hover)}
+    .tool[aria-pressed="true"]{color:var(--lime);border-color:var(--line);background:#1b241a}
+    .tool .star-glyph{font-size:17px;line-height:0;vertical-align:-1px}
+    .rows-heading{display:grid;grid-template-columns:42px minmax(0,1fr) 122px 116px;align-items:center;gap:15px;padding:11px 14px 11px 0;border-bottom:1px solid var(--line);color:#73806f}
+    .rows-heading .actions-heading{text-align:right}
+    .site-list{list-style:none;margin:0;padding:0}
+    .collection-break{display:flex;align-items:baseline;justify-content:space-between;gap:14px;min-height:68px;padding:27px 12px 15px 0;border-bottom:1px solid var(--line)}
+    .collection-break h3{font-size:22px;letter-spacing:-.055em;line-height:1.1;font-weight:600;margin:0}
+    .collection-break .collection-id{color:var(--lime);font-size:10px;margin-right:11px;white-space:nowrap}
+    .collection-break .collection-count{color:var(--faint);white-space:nowrap}
+    .collection-break[data-group="movies"] h3{color:var(--lime)}
+    .site-row{display:grid;grid-template-columns:42px minmax(0,1fr) 122px 116px;gap:15px;align-items:center;min-height:91px;border-bottom:1px solid var(--line);padding:11px 14px 11px 0;transition:background .18s ease,padding .18s ease}
+    .site-row:hover{background:#1b221a}
+    .row-num{color:var(--faint);font:500 11px/1 'DM Mono',monospace;align-self:center}
+    .row-title{font-weight:600;font-size:20px;letter-spacing:-.046em;line-height:1.16;display:block;width:max-content;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:color .16s ease}
+    .row-title:hover{color:var(--lime)}
+    .row-domain{font:400 11px/1.2 'DM Mono',monospace;color:#7e8b7c;margin-top:8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+    .row-category{color:#919d8e;letter-spacing:.03em;font-size:10px;line-height:1.55;max-width:120px}
+    .row-actions{display:flex;align-items:center;gap:4px;justify-content:flex-end}
+    .action{display:inline-grid;place-items:center;width:36px;height:40px;background:transparent;border:0;color:#778574;transition:background .17s,color .17s,transform .17s;flex-shrink:0}
+    .action:hover{background:#2d3928;color:var(--lime);transform:translateY(-2px)}
+    .action.bookmarked{color:var(--lime)}
+    .action.open{color:var(--ink)}
+    .action.open:hover{color:var(--lime)}
+    .icon{width:18px;height:18px;stroke:currentColor;stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .action.bookmarked .star-icon{fill:var(--lime)}
+    .load-wrap{display:flex;justify-content:center;padding:28px 0 0}
+    .load-more{width:100%;min-height:60px;border:1px solid #586450;background:transparent;color:var(--ink);text-align:left;padding:0 18px;display:flex;align-items:center;justify-content:space-between;transition:background .18s,border-color .18s}
+    .load-more:hover{border-color:var(--lime);background:#1a2218}
+    .load-more .more-arr{font-size:20px;color:var(--lime)}
+    .empty{padding:76px 15px 70px;border-bottom:1px solid var(--line);text-align:center}
+    .empty strong{font:italic 400 44px/1.1 'Instrument Serif',Georgia,serif;display:block}
+    .empty p{color:var(--muted);font-size:13px}
+    .empty button{margin-top:14px;border:1px solid var(--line);background:transparent;color:var(--ink);padding:12px 18px}
+    .empty button:hover{border-color:var(--lime)}
+    .footer{border-top:1px solid var(--line);padding:29px 0 40px}
+    .footer-inner{display:flex;gap:26px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .footer-note{font-size:12px;color:#8a9688;max-width:570px;line-height:1.6}
+    .footer-credit{white-space:nowrap;color:#9aab93}
+    
+    
+    .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);z-index:100;opacity:0;pointer-events:none;background:var(--lime);color:var(--dark);padding:12px 18px;font-size:13px;font-weight:700;transition:opacity .2s,transform .2s;box-shadow:0 12px 50px #0004}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @keyframes enter{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+    [data-enter]{animation:enter .7s cubic-bezier(.22,.61,.36,1) both}
+    .hero-rail[data-enter]{animation-delay:.13s}
+    @media(max-width:1120px){.hero-inner{grid-template-columns:minmax(0,1fr) 185px;gap:32px}h1{font-size:clamp(74px,10vw,112px)}.workspace{grid-template-columns:204px minmax(0,1fr);gap:30px}.rows-heading,.site-row{grid-template-columns:30px minmax(0,1fr) 105px 112px;gap:12px}}
+    @media(max-width:780px){.mast{height:66px}.brand{font-size:24px}.header-menu{gap:17px}.header-right{gap:22px}.hero-inner{grid-template-columns:minmax(0,1fr);padding-block:58px 52px;gap:31px}h1{font-size:clamp(76px,13.7vw,110px)}.hero-rail{min-height:0;border-left:0;border-top:1px solid var(--line);padding:22px 0 0;flex-direction:row;align-items:end;gap:30px}.hero-count{font-size:69px}.hero-count-label{margin-top:8px}.hero-meta{width:190px;flex-shrink:0;padding-top:14px}.directory{padding-block:57px 60px}.workspace{display:block;padding-top:26px}.sidebar{position:static;margin-bottom:25px}.sidebar-label{margin:0 0 11px}.filter-list{display:flex;flex-direction:row;gap:7px;overflow:auto;padding-bottom:7px;scrollbar-width:none}.filter-list::-webkit-scrollbar{display:none}.filter-link{display:inline-flex;gap:9px;white-space:nowrap;border:1px solid var(--line);min-height:46px;padding:9px 12px;width:auto}.filter-link[aria-pressed="true"]{border:1px solid var(--lime)}.filter-link .filter-index{display:none}.sidebar-note{display:none}.directory-heading{padding-bottom:24px}}
+    @media(max-width:520px){.collection-break{padding-top:24px;min-height:64px}.collection-break h3{font-size:19px}.collection-break .collection-id{margin-right:6px}.collection-break .collection-count{font-size:9px}.wrap{padding-inline:19px}.header-menu{display:none}.header-right{gap:10px}.header-note{font-size:10px}.hero-inner{padding-block:49px 45px;gap:35px}.eyebrow{font-size:10px;margin-bottom:27px}h1{font-size:clamp(75px,18vw,110px)}h1 .serif{letter-spacing:-.074em}.intro{font-size:14px;max-width:300px;margin-top:20px}.hero-rail{padding-top:20px}.hero-count{font-size:63px}.hero-meta{max-width:170px;width:45%;font-size:9px}.directory-heading{display:block}.directory-sub{text-align:left;margin-top:12px;font-size:12px}.directory{padding-top:51px}.workspace{padding-top:21px}.sidebar{margin-bottom:18px}.searchbar{height:60px;gap:11px}.searchbar input{font-size:16px}.browser-toolbar{padding:16px 0 12px}.result-number{font-size:10px}.tool{padding:9px 6px;font-size:10px;gap:6px}.rows-heading,.site-row{grid-template-columns:23px minmax(0,1fr) 104px;gap:8px;padding-right:0}.rows-heading .header-category,.row-category{display:none}.site-row{min-height:82px}.row-title{font-size:18px}.row-domain{font-size:10px}.action{width:31px;height:39px}.row-actions{gap:1px}.footer-inner{display:block}.footer-credit{margin-top:17px;display:block}}
+    @media(max-width:355px){.brand{font-size:22px}.hero-count{font-size:55px}h1{font-size:70px}.hero-meta{font-size:9px}.search-hint{display:none}.rows-heading,.site-row{grid-template-columns:18px minmax(0,1fr) 98px;gap:5px}.row-title{font-size:16px}.row-domain{font-size:9px}.action{width:30px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip mono" href="#directory">Skip to directory</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#top" aria-label="Frame home">FRAME<span class="brand-dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-menu" aria-label="Primary">
+          <a href="#directory" id="nav-movies">Movies</a>
+          <a href="#directory" id="nav-fourk">4K</a>
+          <a href="#directory" id="nav-saved">Saved <span id="nav-saved-count">0</span></a>
+        </nav>
+        <span class="mono header-note">CURATED LINKS <span aria-hidden="true">↗</span></span>
+      </div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div data-enter>
+          <p class="eyebrow mono"><span class="line" aria-hidden="true"></span>THE MOVIE INDEX &nbsp; / &nbsp; EST. 2026</p>
+          <h1 id="hero-title"><span>Movies.</span><span class="serif">first.</span></h1>
+          <p class="intro">Movie download sites lead the list. 4K streaming comes next. Anime follows after. Just website links, with no embedded players or detours.</p>
+        </div>
+        <div class="hero-rail" data-enter>
+          <div><div id="hero-count" class="hero-count">120</div><div class="hero-count-label">Websites in the index</div></div>
+          <div class="hero-meta mono"><span>Collections</span><strong>04</strong><span>Site type</span><strong>Links only</strong><span>Browse mode</span><strong>Direct ↗</strong></div>
+        </div>
+      </div>
+      <div class="wrap ticker" aria-hidden="true"><div class="ticker-content"><span>MOVIE DOWNLOADS</span><span class="asterisk">✳</span><span>4K STREAMING</span><span class="asterisk">✳</span><span>ANIME STREAMING</span><span class="asterisk">✳</span><span>ANIME DOWNLOADS</span><span class="asterisk">✳</span><span>DIRECT WEBSITE LINKS</span></div></div>
+    </section>
+    <section class="directory wrap" id="directory" aria-labelledby="directory-title">
+      <div class="directory-heading">
+        <div><p class="directory-kicker mono">001 / THE COLLECTION</p><h2 id="directory-title">The directory.</h2></div>
+        <p class="directory-sub">Films lead. Browse by collection, search a website, and open the destination directly.</p>
+      </div>
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Collections">
+          <p class="sidebar-label mono">Browse by category</p>
+          <nav class="filter-list" id="filters" aria-label="Website categories"></nav>
+          <p class="sidebar-note">External websites are run by their own operators. Links may change; availability and licensing aren't verified here.</p>
+        </aside>
+        <div class="browser">
+          <div class="searchbar">
+            <svg class="search-mark icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.6"></circle><path d="m15.6 15.6 5 5"></path></svg>
+            <input id="search" type="search" autocomplete="off" aria-label="Search website names and domains" placeholder="Search websites or domains…">
+            <button id="clear" class="search-clear" type="button" aria-label="Clear search" title="Clear search" hidden>×</button>
+            <span class="search-hint mono" id="search-shortcut" aria-hidden="true">/</span>
+          </div>
+          <div class="browser-toolbar">
+            <div id="results-label" class="result-number mono" aria-live="polite">120 <span>links found</span></div>
+            <div class="tools">
+              <button type="button" id="favorites" class="tool" aria-pressed="false"><span class="star-glyph" aria-hidden="true">☆</span> Saved <span id="fav-count">0</span></button>
+              <button type="button" id="sort" class="tool" aria-label="Reverse alphabetical sort">A–Z <span aria-hidden="true">↓</span></button>
+            </div>
+          </div>
+          <div class="rows-heading mono"><span>No.</span><span>Website / domain</span><span class="header-category">Collection</span><span class="actions-heading">Actions</span></div>
+          <ol class="site-list" id="site-list" aria-label="Website links"></ol>
+          <div class="empty" id="empty" hidden><strong>Nothing in the frame.</strong><p>Try another name, domain, or category.</p><button type="button" id="reset">Reset the index</button></div>
+          <div class="load-wrap" id="load-wrap"><button class="load-more" id="load-more" type="button"><span class="mono">Show more websites</span><span class="more-arr" aria-hidden="true">↓</span></button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="footer-note">FRAME is a link directory. It does not host, download, or stream any content. Check each destination's terms and rights before using it.</span>
+      <span class="footer-credit mono">Only the destination. No detours.</span>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+  'use strict';
+  const rawEntries=[["VegaMovies","https://1vegamovies.baby","movies"],["MKV BASE","https://mkvbase.site","movies"],["DDLBase","https://ddlbase.com","movies"],["XDMovies","https://xdmovies.com","movies"],["MovieParadise","https://movieparadise.org","movies"],["4KHDHub","https://4khdhub.one","movies"],["Cinetaro","https://cinetaro.to","movies"],["HDHub4u","https://hdhub4u.fr","movies"],["ShowBox","https://www.showbox.media","movies"],["PlayTorrio","https://playtorrio.xyz","movies"],["Medeberiya","https://medeberiya.net","movies"],["KMMOVIES","https://kmmovies.shop","movies"],["KatMovieHD","https://new.katmoviehd.top","movies"],["HindMoviez","https://hindmoviez.cafe","movies"],["AV1Core","https://av1core.pages.dev","movies"],["HdMoviesHub","https://hdmovieshub.fyi","movies"],["MultiShows","https://multishows.top","movies"],["OlaMovies","https://olamovies.dad","movies"],["PSArips","https://psarips.is","movies"],["StagaTV","https://www.stagatv.com","movies"],["Willow","https://willowmovies.com","movies"],["Movies Ni Pipay","https://moviesnipipay.me","movies"],["1Shows","https://1shows.org","movies"],["RLSXTVT","https://rlsxtvt.icu","movies"],["Levidia","https://www.levidia.ch","movies"],["Downloads AnyMovies","https://www.downloads-anymovies.co","movies"],["HollyMovieHD","https://hollymoviehd.cc","movies"],["UHDMovies","https://modlist.in","movies"],["TFPDL","https://tfpdl.se","movies"],["Free Movies","https://free-movies.to","movies"],["SeriesVault","https://seriesvault.win","movies"],["FilmFans","https://filmfans.org","movies"],["WorldFree4u","https://worldfree4u.expert","movies"],["SSR Movies","https://ssrmovies.blue","movies"],["Best-MovieZ","https://www.best-moviez.ws","movies"],["ShareBB","https://sharebb.me","movies"],["SolidarityCinema","https://www.solidaritycinema.com","movies"],["FilmGo","https://www.filmgo.live","movies"],["TodayTVSeries","https://www.todaytvseries1.com","movies"],["SubSL","https://subsl.top","movies"],["TV Shows","https://tvshows.ac","movies"],["Pahe","https://pahe.ink","movies"],["TvShows4Mobile","https://tvshows4mobile.org","movies"],["Naijavault","https://www.naijavault.com","movies"],["Waploaded","https://films.waploaded.com","movies"],["HDEncode","https://hdencode.org","movies"],["Cinema of the World","https://worldscinema.org","movies"],["RapidMoviez","https://rmz.cr","movies"],["animepahe","https://animepahe.pw","anime"],["Anikoto","https://anikototv.to","anime"],["Anisuge","https://animesuge.cz","anime"],["Miruro","https://miruro.cx","anime"],["AniVault","https://anivault.tv","anime"],["Re:ANIME","https://reanime.cz","anime"],["AniDream","https://anidream.to","anime"],["Gotaku","https://gotaku.to","anime"],["MKissa","https://mkissa.to","anime"],["All Manga","https://allmanga.to","anime"],["Ani.pm","https://ani.pm","anime"],["AnimeX","https://animex.one","anime"],["NekoWatch","https://nekowatch.xyz","anime"],["AniLight","https://anilight.live","anime"],["Anidap","https://anidap.lol","anime"],["AniXo","https://anixo.online","anime"],["Anistream","https://anistream.one","anime"],["JustAnime","https://justanime.to","anime"],["WeebTube","https://weebtube.cc","anime"],["KickAssAnime","https://kaa.lt","anime"],["Anime Nexus","https://anime.nexus","anime"],["Aniwave","https://aniwaves.ru","anime"],["AniZone","https://anizone.to","anime"],["Kazora","https://kazora.cc","anime"],["Anify","https://anify.to","anime"],["Tsukuyomi","https://tsukuyomi.tv","anime"],["AnimeDex","https://animedex.fun","anime"],["9anime","https://9animstv.to","anime"],["KoToTV","https://kototv.to","anime"],["Zenbu","https://zen-bu.cc","anime"],["Tokyo Insider","https://www.tokyoinsider.com","anidownload"],["Kayoanime","https://kayoanime.com","anidownload"],["hi10anime","https://hi10anime.com","anidownload"],["Anime-Sharing","https://www.anime-sharing.com","anidownload"],["Anime Tosho","https://animetosho.net","anidownload"],["Anime2Enjoy","https://www.anime2enjoy.com","anidownload"],["Chiby","https://www.animechiby.com","anidownload"],["Animevilla","https://animevilla.org","anidownload"],["AnimeSalt","https://animesalt.cx","anidownload"],["PikaHD","https://pikahd.co","anidownload"],["AniDL","https://anidl.org","anidownload"],["anime7.download","https://anime7.download","anidownload"],["AnimeOut","https://www.animeout.xyz","anidownload"],["nibl","https://nibl.co.uk","anidownload"],["Movy","https://www.movy.sx","fourk"],["Cinejoy","https://cinejoy.pk","fourk"],["PopcornMovies","https://popcornmovies.st","fourk"],["BingeBox","https://bingebox.ac","fourk"],["7Movies","https://7movies.ac","fourk"],["Atlantic","https://atlantic.bz","fourk"],["fprime","https://fprime.at","fourk"],["ShuttleTV","https://shuttletv.pk","fourk"],["FlyStream","https://flystream.net","fourk"],["Vivarium","https://vivarium.su","fourk"],["SweetFox","https://sweetfox.app","fourk"],["CineLite","https://cinelite.xyz","fourk"],["dulo","https://dulo.mov","fourk"],["ArrowTV","https://arrowtv.net","fourk"],["Chillflix","https://chillflix.lol","fourk"],["Reelix","https://reelix.ac","fourk"],["BingeBang","https://bingebang.st","fourk"],["Lightflix","https://lightflix.app","fourk"],["Koddo","https://koddo.to","fourk"],["Zenox","https://zenox.lol","fourk"],["Nexa","https://nexa.mov","fourk"],["Stellar","https://stellar.rip","fourk"],["HiveX","https://hivex.stream","fourk"],["Sleepy","https://sleepy.lat","fourk"],["Mapple","https://mapple.fun","fourk"],["Cinecat","https://cinecat.eu","fourk"],["Aether","https://aether.st","fourk"],["frameXTV","https://framextv.xyz","fourk"]];
+  // All view is grouped in editorial order. Alphabetical sorting applies inside a collection, never across them.
+  const categories=[{id:'all',name:'All websites',small:'All links'},{id:'movies',name:'Movie downloads',small:'Movies'},{id:'fourk',name:'4K streaming',small:'4K'},{id:'anime',name:'Anime streaming',small:'Anime streaming'},{id:'anidownload',name:'Anime downloads',small:'Anime downloads'}];
+  const categoryLabel={movies:'Movie downloads',fourk:'4K streaming',anime:'Anime streaming',anidownload:'Anime downloads'};
+  const categoryOrder={movies:0,fourk:1,anime:2,anidownload:3};
+  function normalizeEntries(data){
+    return data.filter(e=>Array.isArray(e)&&e.length===3&&typeof e[0]==='string'&&typeof e[1]==='string'&&
+      /^https:\/\/[\w.-]+(?:\/[^\s]*)?$/.test(e[1])&&categoryLabel[e[2]])
+      .map(([name,url,group])=>({name,url,group,domain:new URL(url).hostname.replace(/^www\./,'')}));
+  }
+  let entries=normalizeEntries(rawEntries);
+  const el=id=>document.getElementById(id);
+  const search=el('search'),list=el('site-list'),filters=el('filters');
+  const copySvg='<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>';
+  const starSvg='<svg class="icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.84 5.83 6.43.93-4.64 4.53 1.1 6.4L12 17.47l-5.73 3.02 1.09-6.4-4.64-4.53 6.43-.93z"></path></svg>';
+  const arrowSvg='<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"></path></svg>';
+  const iconButton=(label,html)=>{const b=document.createElement('button');b.type='button';b.className='action';b.setAttribute('aria-label',label);b.title=label;b.innerHTML=html;return b};
+  let active='all',favoritesOnly=false,sort='az',query='',visibleLimit=24;
+  let favorites=new Set();
+  try{const saved=JSON.parse(localStorage.getItem('frame.saved.v2')||'[]');if(Array.isArray(saved))favorites=new Set(saved.filter(x=>typeof x==='string'))}catch{}
+  function persist(){try{localStorage.setItem('frame.saved.v2',JSON.stringify([...favorites]))}catch{}}
+  let toastTimer;
+  function notify(message){const t=el('toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1700)}
+  async function copyLink(url){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url)}else{const ta=document.createElement('textarea');ta.value=url;ta.style.position='fixed';ta.style.opacity='0';document.body.append(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw Error('Copy denied')}notify('Link copied')}catch{notify('Copy unavailable — open the link instead')}}
+  function renderFilters(){const frag=document.createDocumentFragment();categories.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.className='filter-link';b.setAttribute('aria-pressed',String(active===c.id));const count=c.id==='all'?entries.length:entries.filter(x=>x.group===c.id).length;b.innerHTML='<span class="filter-index">'+String(i).padStart(2,'0')+'</span><span class="filter-name"></span><span class="filter-count">'+count+'</span>';b.querySelector('.filter-name').textContent=c.name;b.addEventListener('click',()=>{active=c.id;visibleLimit=24;render()});frag.append(b)});filters.replaceChildren(frag)}
+  function saveToggle(item){if(favorites.has(item.url)){favorites.delete(item.url);notify('Removed from saved')}else{favorites.add(item.url);notify('Website saved')}persist();render()}
+  function makeRow(item,index){
+    const row=document.createElement('li');row.className='site-row';
+    const number=document.createElement('span');number.className='row-num';number.textContent=String(index+1).padStart(2,'0');
+    const detail=document.createElement('div');detail.style.minWidth='0';
+    const title=document.createElement('a');title.className='row-title';title.textContent=item.name;title.href=item.url;title.target='_blank';title.rel='noopener noreferrer';title.title='Open '+item.domain;
+    const domain=document.createElement('div');domain.className='row-domain';domain.textContent=item.domain;
+    detail.append(title,domain);
+    const category=document.createElement('span');category.className='row-category mono';category.textContent=categoryLabel[item.group];
+    const actions=document.createElement('div');actions.className='row-actions';
+    const copy=iconButton('Copy '+item.name+' link',copySvg);copy.addEventListener('click',()=>copyLink(item.url));
+    const starred=favorites.has(item.url);const star=iconButton((starred?'Remove ':'Save ')+item.name+(starred?' from saved':' to saved'),starSvg);star.setAttribute('aria-pressed',String(starred));if(starred)star.classList.add('bookmarked');star.addEventListener('click',()=>saveToggle(item));
+    const open=document.createElement('a');open.className='action open';open.innerHTML=arrowSvg;open.href=item.url;open.target='_blank';open.rel='noopener noreferrer';open.setAttribute('aria-label','Open '+item.name+' website');open.title='Open website';
+    actions.append(copy,star,open);row.append(number,detail,category,actions);return row;
+  }
+  function makeCollectionBreak(group,count){
+    const row=document.createElement('li');row.className='collection-break';row.dataset.group=group;
+    const heading=document.createElement('h3');
+    const id=document.createElement('span');id.className='collection-id mono';id.textContent='0'+(categoryOrder[group]+1)+' /';
+    heading.append(id,document.createTextNode(categoryLabel[group]));
+    const amount=document.createElement('span');amount.className='collection-count mono';amount.textContent=count+' '+(count===1?'website':'websites');
+    row.append(heading,amount);return row;
+  }
+  function render(){
+    renderFilters();
+    const matches=entries.filter(x=>(active==='all'||x.group===active)&&(!favoritesOnly||favorites.has(x.url))&&(x.name.toLowerCase().includes(query)||x.domain.toLowerCase().includes(query)));
+    matches.sort((a,b)=>((active==='all'?categoryOrder[a.group]-categoryOrder[b.group]:0)||a.name.localeCompare(b.name,undefined,{sensitivity:'base'})*(sort==='az'?1:-1)));
+    const shown=matches.slice(0,visibleLimit),frag=document.createDocumentFragment();
+    let lastGroup='';
+    shown.forEach((x,i)=>{
+      if(active==='all'&&lastGroup!==x.group){
+        frag.append(makeCollectionBreak(x.group,matches.filter(item=>item.group===x.group).length));
+        lastGroup=x.group;
+      }
+      frag.append(makeRow(x,i));
+    });
+    list.replaceChildren(frag);
+    el('hero-count').textContent=entries.length;
+    el('results-label').innerHTML=matches.length+' <span>'+(matches.length===1?'link':'links')+' found</span>';
+    el('nav-saved-count').textContent=favorites.size;el('fav-count').textContent=favorites.size;
+    el('favorites').setAttribute('aria-pressed',String(favoritesOnly));el('favorites').querySelector('.star-glyph').textContent=favoritesOnly?'★':'☆';
+    el('sort').innerHTML=sort==='az'?'A–Z <span aria-hidden="true">↓</span>':'Z–A <span aria-hidden="true">↑</span>';
+    el('empty').hidden=matches.length>0;el('load-wrap').hidden=matches.length<=visibleLimit;
+    el('load-more').querySelector('span').textContent='Show '+Math.min(24,matches.length-visibleLimit)+' more / '+(matches.length-visibleLimit)+' remaining';
+    el('clear').hidden=query.length===0;el('search-shortcut').hidden=query.length>0;
+  }
+  function reset(){active='all';favoritesOnly=false;sort='az';query='';search.value='';visibleLimit=24;render()}
+  search.addEventListener('input',()=>{query=search.value.trim().toLowerCase();visibleLimit=24;render()});
+  el('clear').addEventListener('click',()=>{search.value='';query='';visibleLimit=24;render();search.focus()});
+  el('sort').addEventListener('click',()=>{sort=sort==='az'?'za':'az';visibleLimit=24;render()});
+  el('favorites').addEventListener('click',()=>{favoritesOnly=!favoritesOnly;visibleLimit=24;render()});
+  el('nav-movies').addEventListener('click',()=>{active='movies';favoritesOnly=false;visibleLimit=24;render()});
+  el('nav-fourk').addEventListener('click',()=>{active='fourk';favoritesOnly=false;visibleLimit=24;render()});
+  el('nav-saved').addEventListener('click',()=>{favoritesOnly=true;visibleLimit=24;render()});
+  el('reset').addEventListener('click',reset);
+  el('load-more').addEventListener('click',()=>{visibleLimit+=24;render()});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}else if(e.key==='Escape'&&document.activeElement===search){if(search.value){search.value='';query='';visibleLimit=24;render()}else{search.blur()}}});
+  render();
+  // Optional JSON feed: fully static HTML still works when opened from a file.
+  // On a hosted site, the feed can be updated independently without editing HTML.
+  async function refreshLinks(){
+    if(location.protocol==='file:')return;
+    try{
+      const url=new URL('./links.json',location.href);
+      url.searchParams.set('v',String(Date.now()));
+      const response=await fetch(url,{cache:'no-store'});
+      if(!response.ok)throw Error('Directory temporarily unavailable');
+      const payload=await response.json();
+      const incoming=normalizeEntries(Array.isArray(payload)?payload:payload.entries||[]);
+      if(incoming.length<40)return;
+      const oldByName=new Map(entries.map(e=>[e.group+'|'+e.name.toLowerCase().replace(/[^a-z0-9]/g,''),e]));
+      for(const fresh of incoming){
+        const previous=oldByName.get(fresh.group+'|'+fresh.name.toLowerCase().replace(/[^a-z0-9]/g,''));
+        if(previous&&favorites.has(previous.url)&&previous.url!==fresh.url){
+          favorites.delete(previous.url);
+          favorites.add(fresh.url);
+        }
+      }
+      persist();
+      if(JSON.stringify(entries.map(e=>e.url))!==JSON.stringify(incoming.map(e=>e.url))){
+        entries=incoming;
+        render();
+      }
+    }catch{/* Show the last usable snapshot if the network is unavailable. */}
+  }
+  refreshLinks();
+  setInterval(refreshLinks,15*60*1000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshLinks()});
+  </script>
+</body>
+</html>
