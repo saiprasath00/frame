@@ -4,16 +4,33 @@ A static, searchable links-only website. Its public `site/` folder contains no
 upstream-source labels or addresses. The maintenance code lives outside the
 published folder. No streams, downloads or copyrighted files are hosted.
 
-## Launch on GitHub Pages
+## Deploy on Vercel
 
-1. Create a new **public GitHub repository** and upload this project's files,
-   preserving the `site/`, `scripts/`, and `.github/workflows/` directories.
-   Keep the default branch named `main`, or update the branch name in the workflow.
-2. Go to **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Open **Actions → Refresh directory and publish → Run workflow**. If Actions
-   are disabled, enable them in the repository settings first.
-4. Open the Pages URL provided by the deployment. Put a custom domain in
-   Settings → Pages if you want your own domain.
+The site is deployed at <https://site-lyart-omega-65.vercel.app> and is a static
+build of `site/`.
+
+`vercel.json` sets `outputDirectory` to `site`, so the maintenance scripts and
+this README are never served. The Vercel project is **not** Git-connected; the
+refresh workflow deploys instead, using a `VERCEL_TOKEN` repository secret plus
+the `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` values set in
+`.github/workflows/refresh.yml`.
+
+To deploy by hand:
+
+```bash
+npx vercel deploy --prod --yes --cwd site
+```
+
+To rotate the deploy credentials, create a token in
+**Vercel → Settings → Tokens** and update the `VERCEL_TOKEN` secret with
+`gh secret set VERCEL_TOKEN --repo <owner>/<repo>`.
+
+### Why the workflow deploys instead of Git integration
+
+Vercel's Git integration needs its GitHub App installed on the GitHub account
+that owns the repository. If the Vercel account and that GitHub account are
+different identities, linking fails and the namespace list stays empty. The
+token-based deploy in the workflow avoids that coupling entirely.
 
 ## How updates work
 
