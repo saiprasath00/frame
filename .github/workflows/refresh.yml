@@ -1,7 +1,9 @@
 name: Refresh directory and deploy
 
-# Refreshes site/links.json, commits it, then deploys site/ to Vercel.
-# Uses VERCEL_TOKEN because this Vercel project is not Git-connected.
+# Catalogue maintenance only. Deployment is handled by the canonical repo,
+# Dailyverse0001/frame-links-directory, which Vercel builds from Git on every
+# push to main. This repository's Vercel project now serves a redirect to
+# https://frame-links-directory.vercel.app, so no token deploy is needed here.
 
 on:
   workflow_dispatch:
@@ -12,7 +14,6 @@ on:
     paths:
       - 'site/**'
       - 'scripts/**'
-      - 'vercel.json'
       - '.github/workflows/refresh.yml'
 
 permissions:
@@ -26,8 +27,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Install parser
@@ -51,10 +52,3 @@ jobs:
           git add site/links.json
           git commit -m "Refresh direct website links"
           git push
-
-      - name: Deploy to Vercel
-        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN" --cwd site
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: team_gXX4tdT2H18t4UXB7Ajk6cuW
-          VERCEL_PROJECT_ID: prj_U4mpHZzJX2CjrQ3RZFN6NoIFS5yl
